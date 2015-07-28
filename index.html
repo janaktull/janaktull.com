@@ -1,0 +1,55 @@
+<!-- 
+Learn more about HTML: http://www.w3schools.com/html/default.asp
+Learn more about CSS:  http://www.w3schools.com/css/default.asp
+-->
+
+<html>
+<head>
+  <!-- This shows up on google as the title of the webpage -->
+  <title>Janak Tull Design</title> 
+  <!-- This makes your website look appropriate on a mobile phone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- These are CSS styles for your web page -->
+  <style type="text/css">
+    body {
+      padding: 10px;      /* a little padding around the page */
+      margin: 0 auto;     /* center the web page content */
+      width: 100%;        /* the web page content is full width with a maximum of 600px */
+      max-width: 600px;
+    }
+    img {
+      padding: 5px;       /* padding around the images */
+      margin: 0 auto;     /* center the images within the content */
+      width: 100%;
+      max-width: 500px;
+      transition: max-width 1s ease;  /* a nice transition when the width of the image changes */
+      /* different browsers require "vendor prefixes". This is required for the animation to work with Safari */
+      -webkit-transition: max-width 0.5s ease; 
+    }
+    img:hover {
+      /* make the images larger when you hover over them */
+      max-width: 600px;
+    }
+    /* you can select elements by "class" by putting a dot in there */
+    .email {
+      font-weight: bold;
+      color: blue;
+    }
+    .email:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- This is the main content of your website -->
+  <h1>Welcome to Janak Tull Design</h1>
+  <h3>Here are some of my designs</h3>
+  <img src="images/pic1.jpg">
+  <img src="images/pic2.jpg">
+  <h3>Here are some swatches of cool fabrics</h3>
+  <img src="images/pic1.jpg">
+  <img src="images/pic2.jpg">
+  <h3>Contact</h3>
+  <p><a class="email" href="mailto:janaktull_inquiries@gmail.com">Send me an email yo.</a></p>
+</body>
+</html>
