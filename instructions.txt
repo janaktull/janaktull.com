@@ -1,0 +1,43 @@
+INSTALLATION
+- Open Terminal (in your Utilities folder).
+- Install Homebrew:
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- Install Git:
+    brew install git
+- Install Homebrew Caskroom
+    brew install caskroom/cask/brew-cask
+- Install Sublime Text
+    brew cask install sublime-text
+
+LEARNING
+Learn more about HTML: http://www.w3schools.com/html/default.asp
+Learn more about CSS:  http://www.w3schools.com/css/default.asp
+
+DEVELOPMENT
+- Open Terminal
+- "ls" will list the files in the current folder you are in
+- "cd" will allow you to change directories
+- Start out in your home directory
+    cd ~
+- Then change directories to where your website lives
+    cd Desktop/janaktull.github.io/
+- Open your website in a web browser
+    open index.html
+- Edit the file using sublime text
+    subl index.html
+- Make changes to index.html, save, refresh the webpage
+- When you're done making changes, back to Terminal
+    git add .
+    git commit -m "some useful message about what you changes"
+    git push origin master
+- Go to www.janaktull.com and you should see you're new website within a few seconds
+
+DNS INFO
+- The domain name is hosted by domains.google.com
+
+WARNING
+- This project is OPEN SOURCE so DO NOT put any passwords or secure information in here
+
+GIT
+- The code for this project lives here: github.com/janaktull/janaktull.github.io
+- You can visit this website here: www.janaktull.com or janaktull.github.io
