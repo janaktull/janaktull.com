@@ -31,12 +31,36 @@
     .email:hover {
       color: red;
     }
-    img {
+    .gallery > div {
       max-width: 600px;
       margin-bottom: 20px;
+      outline: none;
     }
+
+    .gallery img {
+      max-width: 100%;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+
     iframe {
       margin: 20px 0;
+    }
+
+    .slide-show-button {
+      text-align: center;
+    }
+
+    button {
+      outline: none;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'pixelmix', monospace;
+      background: transparent;
     }
 
   </style>
@@ -50,56 +74,60 @@
 
   <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257755912&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
+  <p class="slide-show-button">
+    <button onClick="slideShow()">Slide Show</button>
+  </p>
+
   <div class="gallery">
-    <img src="images/1.jpg">
-    <img src="images/2.jpg">
-    <img src="images/3.jpg">
-    <img src="images/4.jpg">
-    <img src="images/5.jpg">
-    <img src="images/6.jpg">
-    <img src="images/7.jpg">
-    <img src="images/8.jpg">
-    <img src="images/9.jpg">
-    <img src="images/10.jpg">
-    <img src="images/11.jpg">
-    <img src="images/12.jpg">
-    <img src="images/13.jpg">
-    <img src="images/14.jpg">
-    <img src="images/15.jpg">
-    <img src="images/16.jpg">
-    <img src="images/17.jpg">
-    <img src="images/18.jpg">
-    <img src="images/19.jpg">
-    <img src="images/20.jpg">
-    <img src="images/21.jpg">
-    <img src="images/22.jpg">
-    <img src="images/23.jpg">
-    <img src="images/24.jpg">
-    <img src="images/25.jpg">
-    <img src="images/26.jpg">
-    <img src="images/27.jpg">
-    <img src="images/28.jpg">
-    <img src="images/29.jpg">
-    <img src="images/30.jpg">
-    <img src="images/31.jpg">
-    <img src="images/32.jpg">
-    <img src="images/33.jpg">
-    <img src="images/34.jpg">
-    <img src="images/35.jpg">
-    <img src="images/36.jpg">
-    <img src="images/37.jpg">
-    <img src="images/38.jpg">
-    <img src="images/39.jpg">
-    <img src="images/40.jpg">
-    <img src="images/41.jpg">
-    <img src="images/42.jpg">
-    <img src="images/43.jpg">
-    <img src="images/44.jpg">
-    <img src="images/45.jpg">
-    <img src="images/46.jpg">
-    <img src="images/47.jpg">
-    <img src="images/48.jpg">
-    <img src="images/49.jpg">
+    <div><img src="images/1.jpg"></div>
+    <div><img src="images/2.jpg"></div>
+    <div><img src="images/3.jpg"></div>
+    <div><img src="images/4.jpg"></div>
+    <div><img src="images/5.jpg"></div>
+    <div><img src="images/6.jpg"></div>
+    <div><img src="images/7.jpg"></div>
+    <div><img src="images/8.jpg"></div>
+    <div><img src="images/9.jpg"></div>
+    <div><img src="images/10.jpg"></div>
+    <div><img src="images/11.jpg"></div>
+    <div><img src="images/12.jpg"></div>
+    <div><img src="images/13.jpg"></div>
+    <div><img src="images/14.jpg"></div>
+    <div><img src="images/15.jpg"></div>
+    <div><img src="images/16.jpg"></div>
+    <div><img src="images/17.jpg"></div>
+    <div><img src="images/18.jpg"></div>
+    <div><img src="images/19.jpg"></div>
+    <div><img src="images/20.jpg"></div>
+    <div><img src="images/21.jpg"></div>
+    <div><img src="images/22.jpg"></div>
+    <div><img src="images/23.jpg"></div>
+    <div><img src="images/24.jpg"></div>
+    <div><img src="images/25.jpg"></div>
+    <div><img src="images/26.jpg"></div>
+    <div><img src="images/27.jpg"></div>
+    <div><img src="images/28.jpg"></div>
+    <div><img src="images/29.jpg"></div>
+    <div><img src="images/30.jpg"></div>
+    <div><img src="images/31.jpg"></div>
+    <div><img src="images/32.jpg"></div>
+    <div><img src="images/33.jpg"></div>
+    <div><img src="images/34.jpg"></div>
+    <div><img src="images/35.jpg"></div>
+    <div><img src="images/36.jpg"></div>
+    <div><img src="images/37.jpg"></div>
+    <div><img src="images/38.jpg"></div>
+    <div><img src="images/39.jpg"></div>
+    <div><img src="images/40.jpg"></div>
+    <div><img src="images/41.jpg"></div>
+    <div><img src="images/42.jpg"></div>
+    <div><img src="images/43.jpg"></div>
+    <div><img src="images/44.jpg"></div>
+    <div><img src="images/45.jpg"></div>
+    <div><img src="images/46.jpg"></div>
+    <div><img src="images/47.jpg"></div>
+    <div><img src="images/48.jpg"></div>
+    <div><img src="images/49.jpg"></div>
   </div>
 
   <p>
@@ -123,14 +151,15 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript">
-    // $(document).ready(function(){
-    //   $('.gallery').slick({
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //     adaptiveHeight: true,
-    //     variableWidth: true,
-    //   })
-    // })
+    function slideShow() {
+      $(document).ready(function(){
+        $('.gallery').slick({
+          autoplay: true,
+          centerPadding: '20px',
+          autoplaySpeed: 2000,
+        })
+      })
+    }
   </script>
 
 </body>
