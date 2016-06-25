@@ -52,25 +52,16 @@ GIT
   <title>Pance News #Worldwide</title>
   <!-- This makes your website look appropriate on a mobile phone -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Slick stylesheet for carousel -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <!-- Default slick theme -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <!-- These are CSS styles for your web page -->
   <style type="text/css">
     body {
       padding: 10px;      /* a little padding around the page */
       margin: 0 auto;     /* center the web page content */
       width: 100%;        /* the web page content is full width with a maximum of 600px */
-      max-width: 600px;
-    }
-    img {
-      padding: 5px;       /* padding around the images */
-      margin: 0 auto;     /* center the images within the content */
-      width: 100%;
-      max-width: 500px;
-      transition: max-width 1s ease;  /* a nice transition when the width of the image changes */
-      /* different browsers require "vendor prefixes". This is required for the animation to work with Safari */
-      -webkit-transition: max-width 0.5s ease;
-    }
-    img:hover {
-      /* make the images larger when you hover over them */
       max-width: 600px;
     }
     /* you can select elements by "class" by putting a dot in there */
@@ -80,20 +71,42 @@ GIT
     }
     .email:hover {
       color: red;
-    }
+    },
+
   </style>
 </head>
 <body>
   <!-- This is the main content of your website -->
   <h1>Pance News #Worldwide</h1>
   <h3>Steppin Dance in Chance of Pance</h3>
-  <!-- <img src="/images/pic1.jpg"> -->
+
+  <div class="gallery">
+    <img src="http://www.patagonia.com/tsimages/55185_FGE.fpx?ftr=8&cvt=jpeg,scans=progressive">
+    <img src="https://assets.mountainkhakis.com/spree/images/901/large/M-Poplin-Pant-Khaki.jpg?1453212680">
+  </div>
+
+  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257755912&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
   <p>
     All clothing is custom made for the individual. Fabrics come and go fast. Request to enter to see latest designs at <strong><a href="https://www.facebook.com/groups/417789025073108/">Pance news #worldwide</a></strong>.
   </p>
   <p>
     <a class="email" href="mailto:janaktull.art@gmail.com">Send me an email yo.</a>
   </p>
+
+  <!-- Load slick.js -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.gallery').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        adaptiveHeight: true,
+      })
+    })
+  </script>
 
 </body>
 </html>
