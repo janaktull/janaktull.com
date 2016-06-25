@@ -23,6 +23,11 @@
       width: 100%;        /* the web page content is full width with a maximum of 600px */
       max-width: 600px;
     }
+
+    h1, h3 {
+      text-align: center;
+    }
+
     /* you can select elements by "class" by putting a dot in there */
     .email {
       font-weight: bold;
@@ -50,6 +55,7 @@
     }
 
     .slide-show-button {
+      /*padding: 10px 0;*/
       text-align: center;
     }
 
@@ -63,6 +69,11 @@
       background: transparent;
     }
 
+    .music {
+      /*padding: 10px 0;*/
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
@@ -72,7 +83,14 @@
 
   <!-- <p>Recommended listening:</p> -->
 
-  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257755912&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+  <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257755912&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe> -->
+
+  <p class="music">
+    <audio controls autoplay>
+      <source src="music/the-love.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+  </p>
 
   <p class="slide-show-button">
     <button onClick="slideShow()">Slide Show</button>
